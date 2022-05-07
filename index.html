@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+        /* The popup form - hidden by default */
+        
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+        /* Add styles to the form container */
+        
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+        /* Full-width input fields */
+        
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        /* When the inputs get focus, do something */
+        
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        /* Set a style for the submit/login button */
+        
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        /* Add a red background color to the cancel button */
+        
+        .form-container .cancel {
+            background-color: red;
+        }
+        /* Add some hover effects to buttons */
+        
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="open-button" onclick="openForm()">Login/SignUp</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Go-on</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Datetimepicker -->
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <div id="fh5co-container">
+        <div id="fh5co-home" class="js-fullheight" data-section="home">
+
+            <div class="flexslider">
+
+                <div class="fh5co-overlay"></div>
+                <div class="fh5co-text">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="to-animate">Go-On</h1>
+                            <h2 class="to-animate">By SAKH<span></span>
+                                <a href="http://freehtml5.co/" target="_blank"></a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <ul class="slides">
+                    <li style="background-image: url(images/slide_1.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5"></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="js-sticky">
+            <div class="fh5co-main-nav">
+                <div class="container-fluid">
+                    <div class="fh5co-menu-1">
+                        <a href="#" data-nav-section="home">Home</a>
+                        <a href="#" data-nav-section="about">About us</a>
+                        <a href="#" data-nav-section="features">Aim</a>
+                    </div>
+                    <div class="fh5co-logo">
+                        <a href="index.html">Go-on</a>
+                    </div>
+                    <div class="fh5co-menu-2">
+                        <a href="#" data-nav-section="menu">Price</a>
+                        <a href="#" data-nav-section="events">Facility</a>
+                        <a href="#" data-nav-section="reservation">Login/SignUp</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="fh5co-about" data-section="about">
+            <div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/res_img_1.jpg)"></div>
+            <div class="fh5co-2col fh5co-text">
+                <h2 class="heading to-animate">About Us</h2>
+                <p class="to-animate"><span class="firstcharacter">T</span>ask that involved standing in long queues was crossing the toll plazas are too much likely to waste time. Now, when everything else has moved online, making such tasks more convenient and efficient,
+                    then why not shift the payment of toll taxes online? To keep with the digitization, We want to introduced the technology of paying toll tax online by using online portal so we can pass the National Highways across the country with
+                    ease without having any trouble on Toll Plaza.</p>
+                <p class="text-center to-animate">
+                    <a href="#" class="btn btn-primary btn-outline">PAY</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="fh5co-sayings">
+            <div class="container">
+                <div class="row to-animate">
+
+                    <div class="flexslider">
+                        <ul class="slides">
+
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;If you're on the road trip you need Go-on&rdquo;</p>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;There are no traffics jams along the extra mile. &rdquo;</p>
+                                    <p></p>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;Guard takes care of your car in the home, Go-on takes care of your car on the road.&rdquo;</p>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote>
+                                    <p>&ldquo;It's not the destination, it's a journey&rdquo;</p>
+                                </blockquote>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-featured" data-section="features">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="heading to-animate">Aim</h1>
+                        <p class="sub-heading to-animate">Our project aims to save your cost, time and provide you a hassle free solution.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fh5co-grid">
+                        <div class="fh5co-v-half to-animate-2">
+                            <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_1.jpg)"></div>
+                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
+                                <h1>Key Activities</h1>
+
+                                <p>Save time and pay the toll before you visit the toll for the whole trip at once and no need to worry about to stand in long queue and waiting for the turn to scan the barcode and then the deduction.To keep with the digitization,
+                                    We want to introduced the technology of paying toll tax online by using online portal so we can pass the National Highways across the country with ease without having any trouble on Toll Plaza.</p>
+                            </div>
+                        </div>
+                        <div class="fh5co-v-half">
+                            <div class="fh5co-h-row-2 to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_2.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-left">
+                                    <h1>Key features</h1>
+
+                                    <p>Time saving.
+                                        <br>Fuel saving. <br> Reduces corruption.<br>No more queue.</p>
+                                </div>
+                            </div>
+                            <div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_8.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-right">
+                                    <h1>Customer Relationship</h1>
+
+                                    <p>1.Money Transparency<br>2.Concession<br>3.Customer Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fh5co-v-half">
+                            <div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_7.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-right">
+                                    <h1>Easy transfer</h1>
+                                    <p>Before selling the vehicle you can easily transfer the your account from our portal to the buyer without any fee</p>
+                                </div>
+                            </div>
+                            <div class="fh5co-h-row-2 to-animate-2">
+                                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_6.jpg)"></div>
+                                <div class="fh5co-v-col-2 fh5co-text arrow-left">
+                                    <h1>Our Resources</h1>
+                                    <p>1.Website<br>2.Application<br>3.Monitoring System<br>4.Payment Gateway</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fh5co-v-half to-animate-2">
+                            <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(images/res_img_3.jpg)"></div>
+                            <div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
+                                <h1>Advantages</h1>
+                                <p>1. Ease of payment<br>2. There is no need to stop at toll plaza for any cash transaction<br>3. No stoppage of vehicle means lower wastage of fuel.<br>4. Online Portal for users<br>5. Cash back Incentives
+                                    <br>6. No requirement of buying the fastag.<br>7. Pay before the ride start by checking number of toll.<br>8. Refundable security depends on the type of vehicle.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="fh5co-type" style="background-image: url(images/slide_3.jpg);" data-stellar-background-ratio="0.5">
+            <div class="fh5co-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 to-animate">
+                        <div class="fh5co-type">
+                            <h3 class="with-icon icon-1">History</h3>
+                            <p>You can checkout the previously paid transactions thorugh our app and website easily.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 to-animate">
+                        <div class="fh5co-type">
+                            <h3 class="with-icon icon-2">Upload</h3>
+                            <p>Now you can upload all your vehicle documents on our portal and need now to worry to carry them physically.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 to-animate">
+                        <div class="fh5co-type">
+                            <h3 class="with-icon icon-3">Refund</h3>
+                            <p>Our cancellation policy focuses on to deduct minimum amount of charges and provide you the complete refund.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 to-animate">
+                        <div class="fh5co-type">
+                            <h3 class="with-icon icon-4">Wallet</h3>
+                            <p>They may help to reduce fraud. The data stored in wallet is encrypted, it also saves time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-menus" data-section="menu">
+            <div class="container">
+                <div class="row text-center fh5co-heading row-padded">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="heading to-animate">PRICING</h2>
+                        <p class="sub-heading to-animate"></p>
+                    </div>
+                </div>
+                <div class="row row-padded">
+                    <div class="col-md-6">
+                        <div class="fh5co-food-menu to-animate-2">
+
+                            <ul>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+
+                                        </figure>
+
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+
+                                        </figure>
+                                        <div>
+                                            <h3>Car/Jeep/Van (VC4)</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        200.00
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+
+                                        </figure>
+                                        <div>
+                                            <h3>Tata Ace and similar mini light Commercial vehicle (VC20)</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        200.00
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+
+                                        </figure>
+                                        <div>
+                                            <h3>Light Commercial vehicle 2-Axle (VC5)</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        150.00
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+
+                                        </figure>
+                                        <div>
+                                            <h3>Truck Multi Axle(7 and above) (VC15)</h3>
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        300.00
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fh5co-food-desc">
+                                        <figure>
+
+                                        </figure>
+                                        <div>
+                                            <h3>Heavy Construction Machinery (VC17)</h3>
+                                        </div>
+                                    </div>
+                                    <div class="fh5co-food-pricing">
+                                        300.00
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="fh5co-food-menu to-animate-2">
+
+                                <ul>
+                                    <li>
+                                        <div class="fh5co-food-desc">
+                                            <figure>
+
+                                            </figure>
+                                            <div>
+                                                <h3>Mini-Bus (VC9) </h3>
+                                            </div>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                            150.00
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fh5co-food-desc">
+                                            <figure>
+
+                                            </figure>
+                                            <div>
+                                                <h3>Bus 3-Axle (VC8) </h3>
+                                            </div>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                            300.00
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fh5co-food-desc">
+                                            <figure>
+
+                                            </figure>
+                                            <div>
+                                                <h3>Light Commercial vehicle 3-Axle (VC6) </h3>
+                                            </div>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                            300.00
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fh5co-food-desc">
+                                            <figure>
+
+                                            </figure>
+                                            <div>
+                                                <h3>Truck 2-6 Axle (VC10-VC14) </h3>
+                                            </div>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                            300.00
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="fh5co-food-menu to-animate-2">
+
+                                <ul>
+
+                                    <li>
+                                        <div class="fh5co-food-desc">
+                                            <figure>
+
+                                            </figure>
+                                            <div>
+                                                <h3>Earth Moving Machinery (VC16)</h3>
+                                            </div>
+                                        </div>
+                                        <div class="fh5co-food-pricing">
+                                            300.00
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div id="fh5co-events" data-section="events" style="background-image: url(images/slide_2.jpg);" data-stellar-background-ratio="0.5">
+                    <div class="fh5co-overlay"></div>
+                    <div class="container">
+                        <div class="row text-center fh5co-heading row-padded">
+                            <div class="col-md-8 col-md-offset-2 to-animate">
+                                <h1 class="heading">Find your way</h1>
+                                <p class="sub-heading">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="fh5co-event to-animate-2">
+                                    <h3>Toll Plazas</h3>
+                                    <span class="fh5co-event-meta"></span>
+                                    <p>Clicking the link below you can search for the active toll plaza and pay the fee at once and enjoy the unstoppable rout..</p>
+                                    <p><a href="https://tis.nhai.gov.in/tollplazasonmap.aspx?language=en" class="btn btn-primary btn-outline">FIND</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fh5co-event to-animate-2">
+                                    <h3>Upload your doc</h3>
+                                    <span class="fh5co-event-meta"> </span>
+                                    <p>Need not to worry before uploading the documents they are end-to-end encrypted with us.</p>
+                                    <p><a href="https://www.google.com/intl/en_in/drive/" class="btn btn-primary btn-outline">UPLOAD</a></p>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="fh5co-event to-animate-2">
+                                    <h3>Navigate your route</h3>
+                                    <span class="fh5co-event-meta"></span>
+                                    <p>Click the link below and you will be redirected to the google maps and find your unstoppable route easily.</p>
+                                    <p>
+                                        <a href="https://www.google.com/maps/@28.6325291,77.3746117,12z" class="btn btn-primary btn-outline">NAVIGATE</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="fh5co-contact" data-section="reservation">
+                    <div class="container">
+                        <div class="row text-center fh5co-heading row-padded">
+                            <div class="col-md-8 col-md-offset-2">
+                                <h1 class="heading to-animate">File a complaint</h1>
+                                <h2> Please login below before filing a complaint.</h2>
+                                <p>Our team will revert you within 24hrs.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 to-animate-2">
+                                <h3>Contact Info</h3>
+                                <ul class="fh5co-contact-info">
+                                    <li class="fh5co-contact-address ">
+                                        <i class="icon-home"></i> Go-on <br>Tower-a Headquarters<br> Gurgaon
+                                    </li>
+                                    <li><i class="icon-phone"></i> XXX-XXXX-XXX</li>
+                                    <li><i class="icon-envelope"></i>info@ongo.co.in</li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 to-animate-2">
+                                <h3>Form</h3>
+                                <div class="form-group ">
+                                    <label for="name" class="sr-only">Name</label>
+                                    <input id="name" class="form-control" placeholder="Name" type="text">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input id="email" class="form-control" placeholder="Email" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="occation" class="sr-only">Occation</label>
+                                    <select class="form-control" id="occation">
+								<option>Select an Issue</option>
+							  <option>Refund</option>
+							  <option>Account</option>
+							  <option>Others</option>
+							</select>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="date" class="sr-only">Date</label>
+                                    <input id="date" class="form-control" placeholder="Date &amp; Time" type="text">
+                                </div>
+
+
+
+                                <div class="form-group ">
+                                    <label for="message" class="sr-only">Comment</label>
+                                    <textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                                </div>
+                                <div class="form-group ">
+                                    <input class="btn btn-primary" value="Send Message" type="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="fh5co-footer">
+                <div class="container">
+                    <div class="row row-padded">
+                        <div class="col-md-12 text-center">
+                            <p class="to-animate">&copy; Go-on <br> Designed by <a href="" target="_blank">SAKH</a>
+                                <a href=" " target="_blank"> </a> <br>
+                                <a href="" target="_blank"> </a>
+                            </p>
+                            <p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="fh5co-social">
+                                <li class="to-animate-2"><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li class="to-animate-2"><a href="#"><i class="icon-twitter"></i></a></li>
+                                <li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- jQuery -->
+            <script src="js/jquery.min.js"></script>
+            <!-- jQuery Easing -->
+            <script src="js/jquery.easing.1.3.js"></script>
+            <!-- Bootstrap -->
+            <script src="js/bootstrap.min.js"></script>
+            <!-- Bootstrap DateTimePicker -->
+            <script src="js/moment.js"></script>
+            <script src="js/bootstrap-datetimepicker.min.js"></script>
+            <!-- Waypoints -->
+            <script src="js/jquery.waypoints.min.js"></script>
+            <!-- Stellar Parallax -->
+            <script src="js/jquery.stellar.min.js"></script>
+
+            <!-- Flexslider -->
+            <script src="js/jquery.flexslider-min.js"></script>
+            <script>
+                $(function() {
+                    $('#date').datetimepicker();
+                });
+            </script>
+            <!-- Main JS -->
+            <script src="js/main.js"></script>
+
+</body>
+
+</html>
